@@ -921,7 +921,8 @@ int main(int argc, char *argv[])
 		}
 		uint32_t src, dst, pg, maxPacketCount, port, dport;
 		double start_time, stop_time;
-		flowf >> src >> dst >> pg >> dport >> maxPacketCount >> start_time;
+		uint32_t YAPS_id;
+		flowf >> YAPS_id >> start_time >> src >> dst >> pg >> dport >> maxPacketCount;
 		NS_ASSERT(n.Get(src)->GetNodeType() == 0 && n.Get(dst)->GetNodeType() == 0);
 		port = portNumder[src]++; // get a new port number 
 		RdmaClientHelper clientHelper(pg, serverAddress[src], serverAddress[dst], port, dport, maxPacketCount, has_win?(global_t==1?maxBdp:pairBdp[n.Get(src)][n.Get(dst)]):0, global_t==1?maxRtt:pairRtt[n.Get(src)][n.Get(dst)]);
