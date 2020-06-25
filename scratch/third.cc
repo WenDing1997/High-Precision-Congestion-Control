@@ -378,14 +378,14 @@ int main(int argc, char *argv[])
 				else
 					std::cout << "L2_BACK_TO_ZERO\t\t\t" << "No" << "\n";
 			}
-			else if (key.compare("TOPOLOGY_FILE") == 0)
+			else if (key.compare("topof") == 0)
 			{
 				std::string v;
 				conf >> v;
 				topology_file = v;
 				std::cout << "TOPOLOGY_FILE\t\t\t" << topology_file << "\n";
 			}
-			else if (key.compare("FLOW_FILE") == 0)
+			else if (key.compare("flow_file") == 0)
 			{
 				std::string v;
 				conf >> v;

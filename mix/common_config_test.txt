@@ -1,0 +1,25 @@
+// Common Parameters
+use_flow_trace: 1
+topology: custom
+flow_file: ./flow_file_test.txt
+topof: py/topo_test/topology.txt
+protocol_parameters: .
+queue_size: 36864
+
+
+// Parameters Only For HPCC 
+
+
+
+
+
+// Parameters Only For YAPS
+host_type: 1
+queue_type: 2
+flow_type: 2
+
+
+// YAPS pFabric
+init_cwnd: 7
+max_cwnd: 10
+retx_timeout: 45e-06
