@@ -987,7 +987,7 @@ int main(int argc, char *argv[])
 
 }
 
-void read_protocol_file(std::out ) {
+void read_protocol_file() {
 		//Read the protocol parameters file
 		std::ifstream conf;
 #ifndef PGO_TRAINING
