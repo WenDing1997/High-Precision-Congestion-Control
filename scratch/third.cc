@@ -1121,17 +1121,17 @@ void read_protocol_file(std::out ) {
 				trace_file = v;
 				std::cout << "TRACE_FILE\t\t\t" << trace_file << "\n";
 			}
-			else if (key.compare("TRACE_OUTPUT_FILE") == 0)
-			{
-				std::string v;
-				conf >> v;
-				trace_output_file = v;
-				if (argc > 2)
-				{
-					trace_output_file = trace_output_file + std::string(argv[2]);
-				}
-				std::cout << "TRACE_OUTPUT_FILE\t\t" << trace_output_file << "\n";
-			}
+			// else if (key.compare("TRACE_OUTPUT_FILE") == 0)
+			// {
+			// 	std::string v;
+			// 	conf >> v;
+			// 	trace_output_file = v;
+			// 	if (argc > 2)
+			// 	{
+			// 		trace_output_file = trace_output_file + std::string(argv[2]);
+			// 	}
+			// 	std::cout << "TRACE_OUTPUT_FILE\t\t" << trace_output_file << "\n";
+			// }
 			else if (key.compare("SIMULATOR_STOP_TIME") == 0)
 			{
 				double v;
