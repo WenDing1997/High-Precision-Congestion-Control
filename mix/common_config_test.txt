@@ -1,15 +1,19 @@
 // Common Parameters
 use_flow_trace: 1
 topology: custom
-flow_file: ./flow_file_test.txt
-topof: py/topo_test/topology.txt
-protocol_parameters: .
+flow_file: mix/flow_file_test.txt
+topof: mix/topology.txt
+protocol_file: mix/config_test2.txt
 queue_size: 36864
 
 
 // Parameters Only For HPCC 
-
-
+TRACE_FILE mix/trace.txt
+TRACE_OUTPUT_FILE mix/mix.tr
+FCT_OUTPUT_FILE mix/fct.txt
+PFC_OUTPUT_FILE mix/pfc.txt
+SIMULATOR_STOP_TIME 4.00
+CC_MODE 3
 
 
 
