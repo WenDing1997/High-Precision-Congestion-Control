@@ -274,8 +274,8 @@ uint64_t get_nic_rate(NodeContainer &n){
 			return DynamicCast<QbbNetDevice>(n.Get(i)->GetDevice(1))->GetDataRate().GetBitRate();
 }
 
+// Read parameters in the protocol file
 void read_protocol_file() {
-		//Read the protocol parameters file
 		std::ifstream conf;
 #ifndef PGO_TRAINING
 		conf.open(protocol_file);
