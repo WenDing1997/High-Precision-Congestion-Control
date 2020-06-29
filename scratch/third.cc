@@ -634,7 +634,7 @@ int main(int argc, char *argv[])
 				else
 					std::cout << "ENABLE_QCN\t\t\t" << "No" << "\n";
 			}
-			else if (key.compare("protocol_file") == 0)
+			else if (key.compare("protocol_file:") == 0)
 			{
 				string v;
 				conf >> v;
