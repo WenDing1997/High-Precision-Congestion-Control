@@ -289,7 +289,7 @@ void read_protocol_file() {
 			conf >> key;
 
 			//std::cout << conf.cur << "\n";
-
+			std::cout << "Begin to compare keys in protocol file\n";
 			if (key.compare("ENABLE_QCN") == 0)
 			{
 				uint32_t v;
@@ -639,6 +639,7 @@ int main(int argc, char *argv[])
 				string v;
 				conf >> v;
 				protocol_file = v;
+				std::cout << "Reading protocol file\n";
 				read_protocol_file();
 			}
 			else if (key.compare("USE_DYNAMIC_PFC_THRESHOLD") == 0)
