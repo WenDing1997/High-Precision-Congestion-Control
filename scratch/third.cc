@@ -384,7 +384,7 @@ void read_protocol_file() {
 				std::string v;
 				conf >> v;
 				topology_file = v;
-				std::cout << "TOPOLOGY_FILE\t\t\t" << topology_file << "\n";
+				std::cout << "topof:\t\t\t" << topology_file << "\n";
 			}
 			else if (key.compare("FLOW_FILE") == 0)
 			{
@@ -399,7 +399,7 @@ void read_protocol_file() {
 				std::string v;
 				conf >> v;
 				flow_file = v;
-				std::cout << "FLOW_FILE\t\t\t" << flow_file << "\n";
+				std::cout << "flow_file:\t\t\t" << flow_file << "\n";
 			}
 			else if (key.compare("TRACE_FILE") == 0)
 			{
@@ -732,12 +732,12 @@ int main(int argc, char *argv[])
 				std::cout << "TOPOLOGY_FILE\t\t\t" << topology_file << "\n";
 			}
 			// topof
-			else if (key.compare("topof") == 0)
+			else if (key.compare("topof:") == 0)
 			{
 				std::string v;
 				conf >> v;
 				topology_file = v;
-				std::cout << "TOPOLOGY_FILE\t\t\t" << topology_file << "\n";
+				std::cout << "topof:\t\t\t" << topology_file << "\n";
 			}
 			else if (key.compare("FLOW_FILE") == 0)
 			{
@@ -747,12 +747,12 @@ int main(int argc, char *argv[])
 				std::cout << "FLOW_FILE\t\t\t" << flow_file << "\n";
 			}
 			// flow file
-			else if (key.compare("flow_file") == 0)
+			else if (key.compare("flow_file:") == 0)
 			{
 				std::string v;
 				conf >> v;
 				flow_file = v;
-				std::cout << "FLOW_FILE\t\t\t" << flow_file << "\n";
+				std::cout << "flow_file:\t\t\t" << flow_file << "\n";
 			}
 			else if (key.compare("TRACE_FILE") == 0)
 			{
