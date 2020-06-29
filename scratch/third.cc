@@ -639,7 +639,7 @@ int main(int argc, char *argv[])
 				string v;
 				conf >> v;
 				protocol_file = v;
-				std::cout << "Reading protocol file\n";
+				std::cout << "Reading protocol file\t" << protocol_file << "\n";
 				read_protocol_file();
 				std::cout << "Finished reading protocol file\n";
 			}
@@ -1235,6 +1235,7 @@ int main(int argc, char *argv[])
 	// add trace
 	//
 
+	printf("debug1\n");
 	NodeContainer trace_nodes;
 	for (uint32_t i = 0; i < trace_num; i++)
 	{
@@ -1246,10 +1247,12 @@ int main(int argc, char *argv[])
 		trace_nodes = NodeContainer(trace_nodes, n.Get(nid));
 	}
 
+	printf("debug2\n");
 	FILE *trace_output = fopen(trace_output_file.c_str(), "w");
 	if (enable_trace)
 		qbb.EnableTracing(trace_output, trace_nodes);
 
+	printf("debug3\n");
 	// dump link speed to trace file
 	{
 		SimSetting sim_setting;
@@ -1265,12 +1268,14 @@ int main(int argc, char *argv[])
 		sim_setting.Serialize(trace_output);
 	}
 
+	printf("debug4\n");
 	Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
 	NS_LOG_INFO("Create Applications.");
 
 	Time interPacketInterval = Seconds(0.0000005 / 2);
 
+	printf("debug5\n");
 	// maintain port number for each host
 	std::unordered_map<uint32_t, uint16_t> portNumder;
 	for (uint32_t i = 0; i < node_num; i++){
@@ -1278,6 +1283,7 @@ int main(int argc, char *argv[])
 			portNumder[i] = 10000; // each host use port number from 10000
 	}
 
+	printf("debug6\n");
 	if (common_config == 1) {
 		for (uint32_t i = 0; i < flow_num; i++)
 		{	if(i%100000 == 0){
