@@ -4,12 +4,9 @@ topof: common_config/topology.txt
 protocol_file: common_config/config_test2.txt
 
 
-
 // Parameters Only For HPCC 
 COMMON_CONFIG 1
 TRACE_OUTPUT_FILE common_config/mix.tr
-
-
 
 
 // Parameters Only For YAPS
