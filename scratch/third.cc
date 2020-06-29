@@ -641,6 +641,7 @@ int main(int argc, char *argv[])
 				protocol_file = v;
 				std::cout << "Reading protocol file\n";
 				read_protocol_file();
+				std::cout << "Finished reading protocol file\n";
 			}
 			else if (key.compare("USE_DYNAMIC_PFC_THRESHOLD") == 0)
 			{
@@ -1278,7 +1279,6 @@ int main(int argc, char *argv[])
 	}
 
 	if (common_config == 1) {
-		std::cout << "Reading old flow file format\n";
 		for (uint32_t i = 0; i < flow_num; i++)
 		{	if(i%100000 == 0){
 			printf("Flow %d read\n",i);
@@ -1295,7 +1295,6 @@ int main(int argc, char *argv[])
 		appCon.Stop(Seconds(stop_time));
 		}
 	} else {
-		std::cout << "Reading old flow file format\n";
 		for (uint32_t i = 0; i < flow_num; i++)
 		{	if(i%100000 == 0){
 			printf("Flow %d read\n",i);
