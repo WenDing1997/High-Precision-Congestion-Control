@@ -638,7 +638,7 @@ int main(int argc, char *argv[])
 				string v;
 				conf >> v;
 				protocol_file = v;
-				std::cout << "Reading protocol file\t\t\t" << protocol_file << "\n";
+				std::cout << "Reading protocol file\t\t" << protocol_file << "\n";
 				read_protocol_file();
 				std::cout << "Finished reading protocol file\n";
 			}
@@ -737,7 +737,7 @@ int main(int argc, char *argv[])
 				std::string v;
 				conf >> v;
 				topology_file = v;
-				std::cout << "topof:\t\t\t" << topology_file << "\n";
+				std::cout << "topof:\t\t\t\t" << topology_file << "\n";
 			}
 			else if (key.compare("FLOW_FILE") == 0)
 			{
@@ -841,7 +841,7 @@ int main(int argc, char *argv[])
 				std::cout << "MIN_RATE\t\t" << min_rate << "\n";
 			}else if (key.compare("FCT_OUTPUT_FILE") == 0){
 				conf >> fct_output_file;
-				std::cout << "FCT_OUTPUT_FILE\t\t" << fct_output_file << '\n';
+				std::cout << "FCT_OUTPUT_FILE\t\t\t" << fct_output_file << '\n';
 			}else if (key.compare("HAS_WIN") == 0){
 				conf >> has_win;
 				std::cout << "HAS_WIN\t\t" << has_win << "\n";
@@ -880,7 +880,7 @@ int main(int argc, char *argv[])
 				std::cout << "DCTCP_RATE_AI\t\t\t\t" << dctcp_rate_ai << "\n";
 			}else if (key.compare("PFC_OUTPUT_FILE") == 0){
 				conf >> pfc_output_file;
-				std::cout << "PFC_OUTPUT_FILE\t\t\t\t" << pfc_output_file << '\n';
+				std::cout << "PFC_OUTPUT_FILE\t\t\t" << pfc_output_file << '\n';
 			}else if (key.compare("LINK_DOWN") == 0){
 				conf >> link_down_time >> link_down_A >> link_down_B;
 				std::cout << "LINK_DOWN\t\t\t\t" << link_down_time << ' '<< link_down_A << ' ' << link_down_B << '\n';
