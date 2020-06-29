@@ -1,24 +1,21 @@
 // Common Parameters
-use_flow_trace: 1
-topology: custom
 flow_file: common_config/flow_file_test.txt
 topof: common_config/topology.txt
 protocol_file: common_config/config_test2.txt
-queue_size: 36864
+
 
 
 // Parameters Only For HPCC 
 COMMON_CONFIG 1
-TRACE_FILE common_config/trace.txt
 TRACE_OUTPUT_FILE common_config/mix.tr
-FCT_OUTPUT_FILE common_config/fct.txt
-PFC_OUTPUT_FILE common_config/pfc.txt
-SIMULATOR_STOP_TIME 4.00
-CC_MODE 3
+
 
 
 
 // Parameters Only For YAPS
+use_flow_trace: 1
+topology: custom
 host_type: 1
 queue_type: 2
 flow_type: 2
+queue_size: 36864

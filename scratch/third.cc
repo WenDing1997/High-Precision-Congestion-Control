@@ -289,7 +289,6 @@ void read_protocol_file() {
 			conf >> key;
 
 			//std::cout << conf.cur << "\n";
-			std::cout << "Begin to compare keys in protocol file\n";
 			if (key.compare("ENABLE_QCN") == 0)
 			{
 				uint32_t v;
@@ -380,7 +379,7 @@ void read_protocol_file() {
 				std::cout << "TOPOLOGY_FILE\t\t\t" << topology_file << "\n";
 			}
 			// topof
-			else if (key.compare("topof") == 0)
+			else if (key.compare("topof:") == 0)
 			{
 				std::string v;
 				conf >> v;
@@ -395,7 +394,7 @@ void read_protocol_file() {
 				std::cout << "FLOW_FILE\t\t\t" << flow_file << "\n";
 			}
 			// flow file
-			else if (key.compare("flow_file") == 0)
+			else if (key.compare("flow_file:") == 0)
 			{
 				std::string v;
 				conf >> v;
