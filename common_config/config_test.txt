@@ -4,7 +4,7 @@ USE_DYNAMIC_PFC_THRESHOLD 1
 
 PACKET_PAYLOAD_SIZE 1000
 
-TOPOLOGY_FILE common_config/topology.txt
+TOPOLOGY_FILE mix/topology.txt
 FLOW_FILE common_config/flow_file_test.txt
 TRACE_FILE common_config/trace.txt
 TRACE_OUTPUT_FILE common_config/mix.tr
