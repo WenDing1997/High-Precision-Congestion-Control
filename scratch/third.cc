@@ -89,6 +89,7 @@ uint64_t nic_rate;
 
 uint64_t maxRtt, maxBdp;
 
+uint32_t common_config = 0;
 std::string protocol_file;
 
 struct Interface{
@@ -649,6 +650,16 @@ int main(int argc, char *argv[])
 					std::cout << "USE_DYNAMIC_PFC_THRESHOLD\t" << "Yes" << "\n";
 				else
 					std::cout << "USE_DYNAMIC_PFC_THRESHOLD\t" << "No" << "\n";
+			}
+			else if (key.compare("COMMON_CONFIG") == 0)
+			{
+				uint32_t v;
+				conf >> v;
+				common_config = v;
+				if (common_config)
+					std::cout << "COMMON_CONFIG\t" << "Yes" << "\n";
+				else
+					std::cout << "COMMON_CONFIG\t" << "No" << "\n";
 			}
 			else if (key.compare("CLAMP_TARGET_RATE") == 0)
 			{
@@ -1265,8 +1276,9 @@ int main(int argc, char *argv[])
 			portNumder[i] = 10000; // each host use port number from 10000
 	}
 
-	for (uint32_t i = 0; i < flow_num; i++)
-	{	if(i%100000 == 0){
+	if (common_config == 1) {
+		for (uint32_t i = 0; i < flow_num; i++)
+		{	if(i%100000 == 0){
 			printf("Flow %d read\n",i);
 		}
 		uint32_t src, dst, pg, maxPacketCount, port, dport;
@@ -1279,8 +1291,23 @@ int main(int argc, char *argv[])
 		ApplicationContainer appCon = clientHelper.Install(n.Get(src));
 		appCon.Start(Seconds(start_time));
 		appCon.Stop(Seconds(stop_time));
+		}
+	} else {
+		for (uint32_t i = 0; i < flow_num; i++)
+		{	if(i%100000 == 0){
+			printf("Flow %d read\n",i);
+		}
+		uint32_t src, dst, pg, maxPacketCount, port, dport;
+		double start_time, stop_time;
+		flowf >> src >> dst >> pg >> dport >> maxPacketCount >> start_time;
+		NS_ASSERT(n.Get(src)->GetNodeType() == 0 && n.Get(dst)->GetNodeType() == 0);
+		port = portNumder[src]++; // get a new port number 
+		RdmaClientHelper clientHelper(pg, serverAddress[src], serverAddress[dst], port, dport, maxPacketCount, has_win?(global_t==1?maxBdp:pairBdp[n.Get(src)][n.Get(dst)]):0, global_t==1?maxRtt:pairRtt[n.Get(src)][n.Get(dst)]);
+		ApplicationContainer appCon = clientHelper.Install(n.Get(src));
+		appCon.Start(Seconds(start_time));
+		appCon.Stop(Seconds(stop_time));
+		}
 	}
-
 
 	topof.close();
 	flowf.close();

@@ -8,6 +8,7 @@ queue_size: 36864
 
 
 // Parameters Only For HPCC 
+COMMON_CONFIG 1
 TRACE_FILE common_config/trace.txt
 TRACE_OUTPUT_FILE common_config/mix.tr
 FCT_OUTPUT_FILE common_config/fct.txt
@@ -21,9 +22,3 @@ CC_MODE 3
 host_type: 1
 queue_type: 2
 flow_type: 2
-
-
-// YAPS pFabric
-init_cwnd: 7
-max_cwnd: 10
-retx_timeout: 45e-06
