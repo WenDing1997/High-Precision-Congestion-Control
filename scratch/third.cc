@@ -638,7 +638,7 @@ int main(int argc, char *argv[])
 				string v;
 				conf >> v;
 				protocol_file = v;
-				std::cout << "Reading protocol file\t" << protocol_file << "\n";
+				std::cout << "Reading protocol file\t\t\t" << protocol_file << "\n";
 				read_protocol_file();
 				std::cout << "Finished reading protocol file\n";
 			}
@@ -752,7 +752,7 @@ int main(int argc, char *argv[])
 				std::string v;
 				conf >> v;
 				flow_file = v;
-				std::cout << "flow_file:\t" << flow_file << "\n";
+				std::cout << "flow_file:\t\t\t" << flow_file << "\n";
 			}
 			else if (key.compare("TRACE_FILE") == 0)
 			{

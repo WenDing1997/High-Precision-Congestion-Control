@@ -1,7 +1,7 @@
 // Common Parameters
 flow_file: common_config/flow_file_test.txt
 topof: common_config/topology_test.txt
-protocol_file: common_config/config_test.txt
+protocol_file: common_config/protocol_file_test.txt
 
 
 // Parameters Only For HPCC 
