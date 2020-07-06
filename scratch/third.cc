@@ -549,7 +549,7 @@ void read_protocol_file() {
   while (!conf.eof()) {
     std::string key;
     conf >> key;
-    read_parameter(&conf, &key);
+    read_parameter(conf, key);
     fflush(stdout);
   }
   conf.close();
@@ -615,7 +615,7 @@ int main(int argc, char *argv[]) {
         std::cout << "TRACE_OUTPUT_FILE\t\t" << trace_output_file << "\n";
       }
       /* End of common_config parameters */
-      read_parameter(&conf, &key);
+      read_parameter(conf, key);
       fflush(stdout);
     }
     conf.close();
