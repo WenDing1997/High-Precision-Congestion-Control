@@ -283,7 +283,7 @@ uint64_t get_nic_rate(NodeContainer &n) {
 }
 
 /* Reads parameters not in common_config file. */
-void read_parameter(std::ifstream conf, std::string key) {
+void read_parameter(std::ifstream &conf, std::string &key) {
   if (key.compare("ENABLE_QCN") == 0) {
     uint32_t v;
     conf >> v;
