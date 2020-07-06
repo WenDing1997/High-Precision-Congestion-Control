@@ -3,8 +3,6 @@ USE_DYNAMIC_PFC_THRESHOLD 1
 
 PACKET_PAYLOAD_SIZE 1500
 
-TOPOLOGY_FILE common_config/topology_test.txt
-FLOW_FILE common_config/flow_file_test.txt
 TRACE_FILE experiments/trace.txt
 TRACE_OUTPUT_FILE common_config/trace.tr
 FCT_OUTPUT_FILE common_config/fct.txt
