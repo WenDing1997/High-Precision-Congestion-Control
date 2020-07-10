@@ -3,12 +3,12 @@ USE_DYNAMIC_PFC_THRESHOLD 1
 
 PACKET_PAYLOAD_SIZE 1500
 
-TOPOLOGY_FILE common_config/tests/10\ flows\topology_dctcp.txt
-FLOW_FILE common_config/tests/10\ flows\flow.txt
-TRACE_FILE common_config/tests/10\ flows\trace.txt
-TRACE_OUTPUT_FILE common_config/tests/10\ flows\trace.tr
-FCT_OUTPUT_FILE common_config/tests/10\ flows\fct.txt
-PFC_OUTPUT_FILE common_config/tests/10\ flows\pfc.txt
+TOPOLOGY_FILE common_config/tests/10\ flows/topology_dctcp.txt
+FLOW_FILE common_config/tests/10\ flows/flow.txt
+TRACE_FILE common_config/tests/10\ flows/trace.txt
+TRACE_OUTPUT_FILE common_config/tests/10\ flows/trace.tr
+FCT_OUTPUT_FILE common_config/tests/10\ flows/fct.txt
+PFC_OUTPUT_FILE common_config/tests/10\ flows/pfc.txt
 
 SIMULATOR_STOP_TIME 4.00
 
