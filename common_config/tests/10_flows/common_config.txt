@@ -1,0 +1,18 @@
+// Common Parameters
+flow_file: common_config/tests/10_flows/flow.txt
+topof: common_config/tests/10_flows/topology_dctcp.txt
+protocol_file: common_config/tests/10_flows/protocol_dctcp.txt
+
+
+// Parameters Only For HPCC 
+COMMON_CONFIG 1
+TRACE_OUTPUT_FILE common_config/tests/10_flows/mix.tr
+
+
+// Parameters Only For YAPS
+use_flow_trace: 1
+topology: custom
+host_type: 1
+queue_type: 2
+flow_type: 2
+queue_size: 36864
