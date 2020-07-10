@@ -3,11 +3,6 @@ USE_DYNAMIC_PFC_THRESHOLD 1
 
 PACKET_PAYLOAD_SIZE 1500
 
-TRACE_FILE experiments/trace.txt
-TRACE_OUTPUT_FILE common_config/trace.tr
-FCT_OUTPUT_FILE common_config/fct.txt
-PFC_OUTPUT_FILE common_config/pfc.txt
-
 SIMULATOR_STOP_TIME 4.00
 
 CC_MODE 8

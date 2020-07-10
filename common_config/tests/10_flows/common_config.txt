@@ -7,7 +7,10 @@ protocol_file: common_config/tests/10_flows/protocol_dctcp.txt
 // Parameters Only For HPCC 
 COMMON_CONFIG 1
 TRACE_OUTPUT_FILE common_config/tests/10_flows/mix.tr
-
+TRACE_FILE common_config/tests/10_flows/trace.txt
+TRACE_OUTPUT_FILE common_config/tests/10_flows/trace.tr
+FCT_OUTPUT_FILE common_config/tests/10_flows/fct.txt
+PFC_OUTPUT_FILE common_config/tests/10_flows/pfc.txt
 
 // Parameters Only For YAPS
 use_flow_trace: 1
